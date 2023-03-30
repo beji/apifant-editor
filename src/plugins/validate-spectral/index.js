@@ -12,6 +12,8 @@ export const updateJsonSpec = (ori, { specActions }) => (...args) => {
 
 //eslint-disable-next-line no-unused-vars
 export const validateSpec = (jsSpec) => (arg) => {
+    // NOTE: The URL is most likely wrong for any actual use case
+    // NOTE: The URL needs to use the v10 ruleset for Openapi 3.0
     fetch("http://localhost:8080/oas-validation/api/validate?ruleset=v5", {
         method: "POST",
         headers: {
